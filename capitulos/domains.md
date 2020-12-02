@@ -1,8 +1,10 @@
 # Domínio do Negócio
+É a parte do sistema em que os nomes de classe, métodos de classe, variáveis devem corresponder ao domínio do negócio de uma empresa ou organização de pessoas. De forma prática, significa dizer que quando uma pessoa ler o código fonte do sistema deverá compreender como o negócio (business) funciona.
 
-Desde o início trabalharemos com o método de geração parcial de código do domínio. Nesse método deixaremos a criação do código de Serialização com a ferramenta automática.
+## Laboratório 1 - Automatizar a criação de funções de conversão fromJson e toJson
+Esse trecho não é obrigatório, mas queríamos entender como é possível gerar automaticamente esse trecho do sistema visando otimizar a produtividade do desenvolvimento do mesmo. Nesse método deixaremos a criação do código de Serialização com a ferramenta automática.
 
-No arquivo pubspec.yaml foi definido os pacotes json_annotation e json_serialization (pesquise a versão mais recente para usar no seu projeto). São esses pacotes que auxiliam na geração automática do domínio. 
+No arquivo pubspec.yaml foram definidos os pacotes json_annotation e json_serialization (pesquise a versão mais recente para usar no seu projeto). São esses pacotes que auxiliam na geração automática do domínio. 
 ```
 dependencies:
   flutter:
@@ -11,7 +13,7 @@ dependencies:
   json_serializable: ^3.5.0
 
 ```
-Mas, o pacote que realmente gera o novo arquivo como parte do domínio é o build_runner. Defina ele na seção de dev_dependencies. Deixo aqui a mesma dica, pesquise a versão mais recente na hora de instalar no seu  projeto.
+Mas, o pacote que realmente gera o novo arquivo como parte do domínio é o build_runner. Defini ele na seção de dev_dependencies, como indicado pelo guia do mesmo. Deixo aqui a mesma dica, pesquise a versão mais recente na hora de instalar no seu projeto.
 ```
 dev_dependencies:
   flutter_test:
@@ -24,7 +26,7 @@ Se o seu ambiente dev tiver bem configurado esses pacotes serão baixados automa
 flutter pub get
 ```
 
-Depois de configurar o projeto foi definido um modelo do domínio.
+Depois de configurar o projeto foi definido um modelo do domínio para experimentar a ferramenta. O domínio em questão é a definição de Usuário do aplicativo.
 ```
 import 'package:json_annotation/json_annotation.dart';
 
@@ -49,7 +51,7 @@ Nesse comando watch o build_runner fica ativo no terminal aguardando alguma modi
 ```
 flutter pub run build_runner watch
 ```
-É importante falar que nenhuma configuração adicional é necessária pois o sistema identifica a presença do código "part 'filename.g.dart';" e só executa a geração nesse arquivo. Existem outros critérios que também não podem ser esquecidos na geração automática:
+É importante lembrar que nenhuma configuração adicional no projeto é necessária pois o build_runner identifica a presença do código "part 'filename.g.dart';" e só executa a geração nesse arquivo. Existem outros critérios que também não podem ser esquecidos na geração automática:
  - É obrigatório declarar o import do json_annotation;
  - É obrigatório declarar apenas um part para cada arquivo. Podem ter várias classes models no mesmo arquivo.
  - É obrigatório identificar a classe model com a anotação @JsonSerializable(). Se a classe não for precedida por esse comando não será gerada.
@@ -58,10 +60,10 @@ flutter pub run build_runner watch
 ```
 flutter pub run build_runner build
 ```
-Já o comando acima executa uma única vez. É o ideal para computadores modestos com 4GB de RAM (podem haver pequenos travamentos mesmo assim).
-Você deve escolher qual comando usar de acordo com a capacidade de processamento do seu computador.
+Já o comando acima executa uma única vez. É o ideal para computadores modestos com 4GB de RAM como o que foi usado neste experimento (podem haver pequenos travamentos mesmo assim).
+Obs: Você deve escolher qual comando usar de acordo com a capacidade de processamento do seu computador.
 
-O arquivo usuario.g.dart gerado tem o seguinte aspecto
+O arquivo usuario.g.dart gerado tem as seguintes características:
 ```
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
