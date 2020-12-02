@@ -28,6 +28,10 @@ Nesse momento o principal clone do qual estou trabalhando é o clone de Instagra
 
 ### Telas ou Screens
 
+## Laboratório 1 - Criando a Página de Login
+
+## Laboratório 2 - Separando o Formulário de Login em um Widget
+
 Como o Card de Login varia de estado de acordo com a interação do usuário foi necessário declará-lo como um StatefulWidget.
 ```
 import 'package:flutter/material.dart';
@@ -192,7 +196,7 @@ class _LoginCardState extends State<LoginCard> {
 
 ```
 
-Já no caso do SignUpCard foi incluído um input que pede o e-mail do usuário. Foi incluída a validação automática do widget, que verifica se atende aos critérios ou não. Como o componente TextFormField permite o uso de validação, utilizou-se o atributo validator para fazer a validação do input da mesma forma que ocorreria no HTML com o input type="email". O comando if (!EmailValidator.validate(email)) verifica se o formato do texto atende aos critérios de e-mail válido.
+Obs: Já no caso do SignUpCard foi incluído um input que pede o e-mail do usuário. Foi incluída a validação automática do widget, que verifica se atende aos critérios ou não. Como o componente TextFormField permite o uso de validação, utilizou-se o atributo validator para fazer a validação do input da mesma forma que ocorreria no HTML com o input type="email". O comando if (!EmailValidator.validate(email)) verifica se o formato do texto atende aos critérios de e-mail válido.
 ```
 ...
 Padding(
@@ -217,7 +221,62 @@ Padding(
 ...
 ```
 A depender da lógica de negócio do seu sistema você pode colocar para checar no servidor se o e-mail pretendido já existe no sistema ou não. Caso o e-mail já esteja em uso isso pode ser indicado ao usuário, e pode ser sugerido variações de nome de e-mail que ainda não existem. Essa lógica não foi programada nesse exemplo.
+
+# Laboratório 3 - Adicionando o Widget LoginCard a Página de Login
 ...
+
+```
+import 'package:flutter/material.dart';
+import '../widgets/logincard.widget.dart';
+
+class LoginPage extends StatefulWidget {
+  LoginPage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool rememberMe = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Column(
+        children: [
+          LoginCard(),
+          Row(
+            children: [
+              Checkbox(
+                value: rememberMe,
+                onChanged: (checked) {
+                  setState(() {
+                    rememberMe = checked;
+                  });
+                },
+              ),
+              Text('Remember me'),
+            ],
+          ),
+          ElevatedButton(
+            child: Text('Submit'),
+            onPressed: () {
+              //TODO: submit login form data
+              Navigator.pushNamed(context, '/start');
+            },
+          )
+        ],
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+```
+
 ...
 ...
 ...
