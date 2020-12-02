@@ -1,5 +1,5 @@
 # Iniciando a Aplicação
-Todos os projetos Flutter começam com um arquivo main.dart onde é definido a primeira tela (MyHomePage). Nesta seção farei algumas experiências sobre este arquivo.
+Todos os projetos Flutter começam com um arquivo main.dart onde é definido a primeira tela (MyHomePage). Nesta seção serão feitas algumas experiências sobre este arquivo.
 
 ## Laboratório 1 - Movendo a Página MyHomePage
 
