@@ -1,3 +1,3 @@
-# Desenvolvimento de Aplicativos com Flutter - Experimentos práticos
+# Experimentos em Flutter - Práticas de Laboratório no Desenvolvimento de Aplicativos
 
-Este documento não é um livro sobre a tecnologia &copy; Flutter, que foi desenvolvida pelo &copy; Google, e trata-se de uma ferramenta de desenvolvimento de aplicativos mobile. Este trabalho visa documentar minhas experiências de apredizado sobre essa ferramenta quando apliquei. Então, ele trata da metodologia que estou desenvolvendo para conseguir aprender a desenvolver nela.
+Este documento não é um livro que visa ensinar sobre a tecnologia &copy; Flutter, que foi desenvolvida pelo &copy; Google. Este trabalho visa documentar minhas experiências de apredizado sobre essa ferramenta de desenvolvimento de aplicativos mobile, e demonstra como estou aprendendo a usá-la. Então, ele trata da metodologia que estou desenvolvendo para aprender, é composto de vários experimentos que, sempre que possível, seguirá princípios científicos, e detalhará a forma de pesquisa elaborada para produzir o produto e avaliar os resultados obtidos.
