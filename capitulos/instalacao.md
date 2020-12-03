@@ -35,3 +35,6 @@ Como o processo de criação do ambiente é tão fácil, e eu estou apenas fazen
 Bom, se você chegou até aqui e continua empolgado é por que chegamos a principal parte. Vamos criar um App mobile. Uhuu!!!
 
 [Iniciando uma Aplicação >>](starting.md)
+
+&copy; Android e &copy Google são marcas registradas da Google Inc.
+&copy; IOS, &copy; Mac e &copy; Apple são marcas registradas da Apple Inc.
