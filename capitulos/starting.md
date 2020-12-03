@@ -15,10 +15,12 @@ Ao criar os projetos dessa forma lembrou-se que poderia ocorrer o problema de pa
 
 `$> flutter create--org sua.estrutura-de-pacotes.nome-do-app nome-do-app `
 
+Exemplo: flutter create--org io.github.felipebastosweb.nome-do-app nome-do-app
+
 Obs: Esse mesmo cuidado você deve ter antes de publicar o seu aplicativo na loja pois se você utilizar um package-id já existente a loja pode exigir que você defina outro package-id.
 
 Pronto!
-Agora já é possível iniciar o desenvolviento da aplicação, o que será feito no Laboratório 2.
+Agora já é possível iniciar o desenvolvimento da aplicação, o que será feito no Laboratório 2.
 
 ## Laboratório 2 - Abrindo o Projeto do Aplicativo para Iniciar o Desenvolvimento
 
