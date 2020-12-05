@@ -4,16 +4,6 @@
 
 Antes de continuarmos vamos fazer o planejamento do nosso aplicativo. Irei trabalhar com pelo menos 3 tipos de planejamento: Planejamento do Projeto, Planejamento do Produto e Planejamento de UI/UX.
 
-### Planejamento do Projeto
-
-Nos planos do projeto, sempre que viável, será demonstrado ferramentas e planos que facilitem organizar a comunicaçao, estimar prazos, orçar custos, etc.
-
-
-### Planejamento do Produto
-
-No Planejamento do Produto será demonstrado como visualizar o Produto tanto na visao tradicional, seguindo o UML, para a visao do Gerente de Projetos/Programas ou Engenheiro, quanto na visao Ágil, fazendo uma comunicaçao ampla entre a equipe de Gestao e a equipe de desenvolvimento do Produto. Porém, o foco das experiencias nao podem ser o Planejamento, e sim a demonstraçao da experiencia e seus resultados.
-
-
 ### Planejamento de UI/UX
 
 Existem diversas formas de planejar a UI/UX de um aplicativo para celular. A forma mais tradicional é usando wireframes em papel, e a forma mais utilizada que é via aplicativos web de prototipação de aplicativos mobile. Nesse planejamento falarei como estou fazendo o planejamento das telas, fluxo de navegação entre telas, e como as informações são mostradas ao usuário.
