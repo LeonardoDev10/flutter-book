@@ -1,5 +1,5 @@
-# Criando Componentes
-Os Componentes dos quais trataremos no Flutter são os Componentes Visuais que chamamos pelo nome inglês de Widgets. Já existe na internetdiversos guias e tutoriais sobre como criar cada tipo widget. Listarei aqui alguns para que possa consultar posteriormente.
+# Criando Componentes (Widgets)
+Os Componentes dos quais trataremos no Flutter são os Componentes Visuais que chamamos pelo nome inglês de Widgets. Já existe na internet diversos guias e tutoriais sobre como criar cada tipo widget. Listarei aqui alguns para que possa consultar posteriormente.
 
 Nesse capítulo irei focar na composição de componentes para formar layouts mais complexos. Para isso eu estou usando diversos clones de aplicativos conhecidos internacionalmente para estudar como cada layout é construído utilizando os diversos tipos de componentes fornecidos pelo Flutter.
 
