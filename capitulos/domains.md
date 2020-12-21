@@ -1,6 +1,14 @@
 # Domínio do Negócio
 É a parte do sistema em que os nomes de classe, métodos de classe, variáveis devem corresponder ao domínio do negócio de uma empresa ou organização de pessoas. De forma prática, significa dizer que quando uma pessoa ler o código fonte do sistema deverá compreender como o negócio (business) funciona.
 
+Será adotado neste trabalho o seguinte modelo de fluxo de dados:
+ 1. O método principal de acesso aos dados será através de acesso ao banco SQlite;
+ 2. Outros dados com baixo volume serão consultados nas Preferências de Usuário;
+ 3. Será consultado a existência de novos dados na API remota, porém, em menor frequência;
+ 4. Haverá um modelo padrão de classe de domínio para facilitar a troca de informações entre os repositorios de dados citados acima.
+
+Por conta desse protocolo de comunicação entre os repositório de dados foi começado o desenvolvimento do domínio pelo protocolo comum de comunicação. Foi criada a pasta src/domains/models para organizar os arquivos desse pacotes de classes.
+
 ## Laboratório 1 - Automatizar a criação de funções de conversão fromJson e toJson
 Esse trecho não é obrigatório, mas queríamos entender como é possível gerar automaticamente esse trecho do sistema visando otimizar a produtividade do desenvolvimento do mesmo. Nesse método deixaremos a criação do código de Serialização com a ferramenta automática.
 
@@ -108,3 +116,37 @@ dev_dependencies:
 ```
 
 
+## Laboratório _ - Criação de Tabelas do Banco de Dados
+
+
+```
+import 'package:moor/moor.dart';
+
+// assuming that your file is called filename.dart. This will give an error at first,
+// but it's needed for moor to know about the generated code
+part 'filename.g.dart';
+
+// this will generate a table called "todos" for us. The rows of that table will
+// be represented by a class called "Todo".
+@DataClassName("Todo")
+class Todos extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get title => text().withLength(min: 6, max: 32)();
+  TextColumn get content => text().named('body')();
+  IntColumn get category => integer().nullable()();
+}
+
+@DataClassName("Category")
+class Categories extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get description => text()();
+}
+
+@UseMoor(tables: [Todos, Categories])
+class MyDatabase {
+  
+}
+
+```
+
+// https://moor.simonbinder.eu/docs/examples/relationships/
