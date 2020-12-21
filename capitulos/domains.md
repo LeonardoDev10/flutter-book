@@ -91,3 +91,20 @@ Map<String, dynamic> _$UsuarioToJson(Usuario instance) => <String, dynamic>{
 
 ```
 Pode até parecer pouco, mas a medida que você vai aumentando o tamanho do seu app, e fazendo modificações no domínio, esse já um auxílio considerável, pois mais do que gerar o código ele verifica se a sintaxe do seu domínio está correta, evitando perdas valiosas de horas corrigindo pontuação ou erros de digitação do código.
+
+## Armazenando Dados no Sqlite
+
+Um dos grandes desafios da tecnologia mobile é decidir o que?, como? e por quanto tempo armazenar as informações no dispositivo. Uma das formas mais importantes de armazenar dados estruturados é através do banco de dados. E, nos smartphones um dos bancos de dados mais utilizados é o Sqlite, que é um pequeno sistema de banco de dados presente nas plataformas Android e IOS. Nesta seção vamos analisar quais dados devem ser estruturados, e como devemos armazenar eles no banco de forma a ser facilmente integrado com a API remota do backend.
+
+## Laboratório _ - Instalação do Moor ORM
+
+```
+dependencies:
+ moor: ^3.0.0
+ sqlite3_flutter_libs:
+ sqflite: ^1.1.7 # Still used to obtain the database location
+dev_dependencies:
+ moor_generator: ^3.0.0
+```
+
+
