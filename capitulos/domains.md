@@ -104,6 +104,8 @@ Pode até parecer pouco, mas a medida que você vai aumentando o tamanho do seu 
 
 Um dos grandes desafios da tecnologia mobile é decidir o que?, como? e por quanto tempo armazenar as informações no dispositivo. Uma das formas mais importantes de armazenar dados estruturados é através do banco de dados. E, nos smartphones um dos bancos de dados mais utilizados é o Sqlite, que é um pequeno sistema de banco de dados presente nas plataformas Android e IOS. Nesta seção vamos analisar quais dados devem ser estruturados, e como devemos armazenar eles no banco de forma a ser facilmente integrado com a API remota do backend.
 
+Existem várias formas de acessar o banco de dados Sqlite utilizando Flutter. Dentre as opções pesquisadas tem-se a: sqflite, sqlentity, floor e moor. Analisamos cada um destes do ponto de vista da produtividade de criação de código, a complexidade da escrita do código, e a facilidade de dar manutenção ao código. Não foram analisados critérios como desempenho das bibliotecas durante a consulta. Levando tais fatores em consideração, optou-se pelo Moor FFI, que é um ORM escrito em Dart com suporte a banco de dados Sqlite, e de forma explicita modela o banco de dados Sqlite e permite fazer consultas escrevendo pouco ou quase nenhum código SQL.
+
 ## Laboratório _ - Instalação do Moor ORM
 
 ```
