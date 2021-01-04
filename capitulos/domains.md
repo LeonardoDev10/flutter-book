@@ -1,3 +1,9 @@
+# Dados da Aplicação e Domínio do Negócio no Flutter
+No Flutter existe um tratamento do processamento de dados da aplicação e modelo de arquitetura do negócio de forma separada. Por convenção, toda a comunidade profissional em Flutter segue o modelo de arquitetura limpa ou, em inglês Clean Architecture. Na própria modelagem do framework percebemos indícios disso quando o Flutter trata o processamento de dados como dados remotos e dados locais (ou internos).
+
+https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6
+
 # Domínio do Negócio
 É a parte do sistema em que os nomes de classe, métodos de classe, variáveis devem corresponder ao domínio do negócio de uma empresa ou organização de pessoas. De forma prática, significa dizer que quando uma pessoa ler o código fonte do sistema deverá compreender como o negócio (business) funciona.
 
