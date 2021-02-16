@@ -10,6 +10,7 @@ Widget _cartItemForm(GlobalKey<FormState> _formKey) {
         TextFormField(
           validator: ValidationBuilder().minLength(1).maxLength(3).build(),
         ),
+        Text('value'),
       ],
     )
   );

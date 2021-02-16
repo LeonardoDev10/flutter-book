@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import '../widgets/signup_form.dart';
+import '../widgets/login_form.dart';
 
-class SignUpPage extends StatefulWidget {
-  SignUpPage({Key key, this.title}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -20,7 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: SignUpForm(),
+        child: LoginForm(),
       ),
     );
   }
